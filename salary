@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+class Employee{
+    int salary;
+    int hours;
+        
+    public void getinfo(int hours,int salary){
+        this.hours=hours;
+        this.salary=salary;
+    }
+     void Addsal(){
+        if(salary<500){
+            salary=salary+10;}
+    }
+    void Addwork(){
+        if(hours>6){
+            salary=salary+5;}
+    }
+    void printsal(){
+        System.out.print(salary);
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	     Scanner sc=new Scanner(System.in);
+     int hours=sc.nextInt();
+        int salary=sc.nextInt();
+		Employee obj=new Employee();
+		obj.getinfo(hours,salary);
+		obj.Addwork();
+		obj.Addsal();
+		obj.printsal();
+		
+	    
+	}
+}
